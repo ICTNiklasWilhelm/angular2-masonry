@@ -37,7 +37,7 @@ export class AngularMasonryBrick implements OnDestroy, AfterViewInit {
 
     /** When HTML in brick changes dinamically, observe that and change layout */
     private watchForHtmlChanges(): void {
-        MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
         if (MutationObserver) {
             /** Watch for any changes to subtree */
